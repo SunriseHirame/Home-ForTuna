@@ -25,7 +25,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="FishController.cs" t="Include" />
+          <e p="FishDestroyer.cs" t="Include" />
           <e p="FishSpawner.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
         </e>
         <e p="Textures" t="Include">
           <e p="aaasddee.cs" t="Include" />

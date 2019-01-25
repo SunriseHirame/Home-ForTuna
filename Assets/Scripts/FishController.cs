@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class FishController : MonoBehaviour {
-    public Rigidbody Mid;
+    public Rigidbody2D Mid;
 
     public float Force = 1;
 
@@ -16,18 +16,21 @@ public class FishController : MonoBehaviour {
         if (Vector3.Distance(transform.position, Vector3.zero) > 20) {
             Destroy(this.gameObject);
         }
-        transform.Translate(0.1f,0,0,Space.Self);
+        
+        if(!_isBounced)
+            transform.Translate(0.1f,0,0,Space.Self);
+        
         if (Random.value < 0.01f && !_isBounced) {
             Bounce();
         }
     }
 
     private void Bounce() {
-        foreach (Rigidbody rb in transform.GetComponentsInChildren<Rigidbody>()) {
+        foreach (Rigidbody2D rb in transform.GetComponentsInChildren<Rigidbody2D>()) {
             rb.isKinematic = false;
         }
-        Vector3 Force = new Vector3(Random.Range(-1,1),Random.Range(0.5f,1),0);
-        Mid.AddForce(Force.normalized*this.Force,ForceMode.Impulse);
+        Vector3 Force = new Vector3(0,1,0);
+        Mid.AddForce(Force.normalized*this.Force,ForceMode2D.Impulse);
         _isBounced = true;
     }
 }
