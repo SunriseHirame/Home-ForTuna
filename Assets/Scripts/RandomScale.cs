@@ -6,7 +6,7 @@ public class RandomScale : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start() {
-        float scale = Random.Range(0.5f, 1.5f);
+        float scale = Random.Range(1f, 1.5f);
         transform.localScale = transform.localScale * scale;
     }
 }

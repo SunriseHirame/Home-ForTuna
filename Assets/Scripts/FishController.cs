@@ -12,6 +12,8 @@ public class FishController : MonoBehaviour {
     private bool _isBounced = false;
 
     private float _speed = 0.1f;
+
+    public GameObject animated;
     // Update is called once per frame
     private void Start() {
         _speed = Random.Range(0.05f, 0.2f);
@@ -32,6 +34,10 @@ public class FishController : MonoBehaviour {
     }
 
     private void Bounce() {
+        animated.SetActive(false);
+        transform.GetComponent<MeshRenderer>().enabled = true;
+        transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+        transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
         foreach (Rigidbody2D rb in transform.GetComponentsInChildren<Rigidbody2D>()) {
             rb.isKinematic = false;
         }
