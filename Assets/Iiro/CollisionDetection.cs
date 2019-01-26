@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CollisionDetection : MonoBehaviour
 {
     
     public Score PlayerScore;
-    public Text PopUpText;
+    public TMP_Text PopUpText;
     
     private void OnTriggerEnter2D (Collider2D other)
     {
@@ -16,7 +17,7 @@ public class CollisionDetection : MonoBehaviour
             int points_correct = 20;
             PlayerScore.CurrentScore += points_correct;
             PopUpText.text = points_correct.ToString ();
-            PopUpText.gameObject.SetActive (true);    // This gets disabled after delay by another script called DisableAfterDelay
+            PopUpText.gameObject.SetActive (true);    // This gets disabled after certain delay by another script called DisableAfterDelay
         }
         else
         {
@@ -24,7 +25,7 @@ public class CollisionDetection : MonoBehaviour
             if(!other.gameObject.CompareTag("NotFish"))
                 PlayerScore.CurrentScore += points_incorrect;
             PopUpText.text = points_incorrect.ToString ();
-            PopUpText.gameObject.SetActive (true);    // This gets disabled after delay by another script called DisableAfterDelay
+            PopUpText.gameObject.SetActive (true);    // This gets disabled after certain delay by another script called DisableAfterDelay
         }
     }
 }
