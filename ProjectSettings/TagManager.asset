@@ -9,6 +9,7 @@ TagManager:
   - Red
   - Yellow
   - NotFish
+  - Water
   layers:
   - Default
   - TransparentFX
