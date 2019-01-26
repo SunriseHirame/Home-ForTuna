@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: e9292441dc2569c4c91d01366eb8c92d
+guid: 509f4b6983a6a15498704482620b90ce
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material
-    2100002: No Name
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: fish_1_tail
+    4300000: fish_1_body
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -61,7 +60,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:

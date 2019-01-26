@@ -25,7 +25,7 @@ public class FishSpawner : MonoBehaviour {
         pos -= Vector3.up * Random.Range(DeltaYMin,DeltaYMax);
         Quaternion rot = Quaternion.identity;
         if (pos.x > 0) {
-            rot = Quaternion.Euler(0,0,180);
+            rot = Quaternion.Euler(0,180,0);
         }
         Instantiate(f, pos, rot);
         

@@ -34,6 +34,16 @@ public class Player : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        if (other.transform.tag.Equals("NotFish")) {
+            foreach (Rigidbody2D rb in other.transform.parent.GetComponentsInChildren<Rigidbody2D>()) {
+                rb.velocity = Vector2.zero;
+            }
+        }
+        else {
+            foreach (Rigidbody2D rb in other.transform.GetComponentsInChildren<Rigidbody2D>()) {
+                rb.velocity = Vector2.zero;
+            }
+        }
         Rigidbody2D orb = other.rigidbody;
         orb.velocity = Vector2.zero;
         float collisionDeltaX = other.GetContact(0).point.x-transform.position.x;
