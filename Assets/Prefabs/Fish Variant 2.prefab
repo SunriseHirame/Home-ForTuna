@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish Variant 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2233945602359904390, guid: f555222c629a44849b6a4c85eb5910d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Red
+      objectReference: {fileID: 0}
     - target: {fileID: 2233945602359904391, guid: f555222c629a44849b6a4c85eb5910d2,
         type: 3}
       propertyPath: m_LocalPosition.x
