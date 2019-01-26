@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: e9292441dc2569c4c91d01366eb8c92d
+guid: 94753037e6f35e3479f99b11eeb3d5bd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material
-    2100002: No Name
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
     4300000: fish_1_tail
