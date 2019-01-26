@@ -29,7 +29,7 @@ public class FishController : MonoBehaviour {
         foreach (Rigidbody2D rb in transform.GetComponentsInChildren<Rigidbody2D>()) {
             rb.isKinematic = false;
         }
-        Vector3 Force = new Vector3(0,1,0);
+        Vector3 Force = new Vector3(Random.Range(-1.0f,1.0f),1,0);
         Mid.AddForce(Force.normalized*this.Force,ForceMode2D.Impulse);
         _isBounced = true;
     }

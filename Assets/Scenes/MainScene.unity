@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 329308730}
   - component: {fileID: 329308731}
   - component: {fileID: 329308735}
+  - component: {fileID: 329308736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -217,6 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1669c6e95cf3714b8cbd9c7d88c843d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Limit: 12
+  PlayerSize: 3
+  BouncyForce: 15
 --- !u!61 &329308731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -228,7 +232,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -296,8 +300,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329308729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalScale: {x: 2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -323,6 +327,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!251 &329308736
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329308729}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +460,12 @@ MonoBehaviour:
   SpawnDelay: 1
   Fish:
   - {fileID: 2233945602359904390, guid: f555222c629a44849b6a4c85eb5910d2, type: 3}
+  - {fileID: 2233945602359904390, guid: bf01cce06786ed44d8ed7d7a3152e823, type: 3}
+  - {fileID: 2233945602359904390, guid: 969ac11955f77d745b0ac56183cd1ad9, type: 3}
+  - {fileID: 2233945602359904390, guid: d63d711747c550c49ac0d10d9d87ade5, type: 3}
+  Limit: 12
+  DeltaYMin: 1.6
+  DeltaYMax: 3.5
 --- !u!4 &874816447
 Transform:
   m_ObjectHideFlags: 0

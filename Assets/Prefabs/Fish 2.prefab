@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a4c918d9f635d048b5071dd3575cd60, type: 2}
+  - {fileID: 2100000, guid: 4cfc79419db7c1d4bb530609b1e33ed4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -213,7 +213,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a4c918d9f635d048b5071dd3575cd60, type: 2}
+  - {fileID: 2100000, guid: 4cfc79419db7c1d4bb530609b1e33ed4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,8 +286,8 @@ GameObject:
   - component: {fileID: 8581733158873369058}
   - component: {fileID: 7079948040645574730}
   m_Layer: 0
-  m_Name: Fish
-  m_TagString: Blue
+  m_Name: Fish 2
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +333,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3a4c918d9f635d048b5071dd3575cd60, type: 2}
+  - {fileID: 2100000, guid: 4cfc79419db7c1d4bb530609b1e33ed4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
