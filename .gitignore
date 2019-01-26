@@ -36,3 +36,5 @@ sysinfo.txt
 *.unitypackage
 .idea/.idea.Home-ForTuna/.idea/contentModel.xml
 .idea/.idea.Home-ForTuna/.idea/workspace.xml
+.idea/.idea.Home-ForTuna/.idea/workspace.xml
+Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
