@@ -8,6 +8,7 @@ TagManager:
   - Green
   - Red
   - Yellow
+  - NotFish
   layers:
   - Default
   - TransparentFX
