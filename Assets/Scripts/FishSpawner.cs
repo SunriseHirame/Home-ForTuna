@@ -21,7 +21,7 @@ public class FishSpawner : MonoBehaviour {
 
     private void SpawnFish() {
         GameObject f = Fish[Random.Range(0, Fish.Length)];
-        Vector3 pos = Vector3.right * (Random.value < 0.5f ? -Limit : Limit);
+        Vector3 pos = Vector3.right * (Random.value < 0.5f ? -Limit : -Limit);
         pos -= Vector3.up * Random.Range(DeltaYMin,DeltaYMax);
         Quaternion rot = Quaternion.identity;
         if (pos.x > 0) {
