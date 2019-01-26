@@ -10,7 +10,13 @@ public class FishController : MonoBehaviour {
     public float Force = 1;
 
     private bool _isBounced = false;
+
+    private float _speed = 0.1f;
     // Update is called once per frame
+    private void Start() {
+        _speed = Random.Range(0.05f, 0.2f);
+    }
+
     void Update()
     {
         if (Vector3.Distance(transform.position, Vector3.zero) > 20) {
@@ -18,7 +24,7 @@ public class FishController : MonoBehaviour {
         }
         
         if(!_isBounced)
-            transform.Translate(0.1f,0,0,Space.Self);
+            transform.Translate(_speed,0,0,Space.Self);
         
         if (Random.value < 0.01f && !_isBounced) {
             Bounce();
