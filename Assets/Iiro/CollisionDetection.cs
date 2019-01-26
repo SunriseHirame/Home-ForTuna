@@ -18,11 +18,10 @@ public class CollisionDetection : MonoBehaviour
             PopUpText.text = points_correct.ToString ();
             PopUpText.gameObject.SetActive (true);    // This gets disabled after delay by another script called DisableAfterDelay
         }
-        else
+        else if(!other.gameObject.CompareTag("NotFish"))
         {
             int points_incorrect = 10;
-            if(!other.gameObject.CompareTag("NotFish"))
-                PlayerScore.CurrentScore += points_incorrect;
+            PlayerScore.CurrentScore += points_incorrect;
             PopUpText.text = points_incorrect.ToString ();
             PopUpText.gameObject.SetActive (true);    // This gets disabled after delay by another script called DisableAfterDelay
         }
