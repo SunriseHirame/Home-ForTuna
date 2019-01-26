@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: {fileID: 329308738}
-  PopUpText: {fileID: 0}
+  PopUpText: {fileID: 1280897315}
 --- !u!60 &336292575
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: {fileID: 329308738}
-  PopUpText: {fileID: 0}
+  PopUpText: {fileID: 714549172}
 --- !u!60 &355605158
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1522,10 +1522,10 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 1}
-      - {x: -0.46443367, y: 0.7324419}
-      - {x: -0.044284344, y: -0.65734243}
-      - {x: 0.047444344, y: -0.6763017}
-      - {x: 0.46443367, y: 0.74508166}
+      - {x: -0.39675045, y: 0.72736907}
+      - {x: -0.02172327, y: -0.50798774}
+      - {x: 0.02739191, y: -0.52688956}
+      - {x: 0.40179563, y: 0.7451668}
 --- !u!4 &376044150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3088351753039838878, guid: f56aa6b701b94d393aabc0d546766a2c,
@@ -1641,7 +1641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: {fileID: 329308738}
-  PopUpText: {fileID: 0}
+  PopUpText: {fileID: 1323020419}
 --- !u!60 &438083113
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1897,6 +1897,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &714549172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3721754511352499134, guid: f8d8c2654628b844fbe412509f55529b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1149044447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &724702500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2746,6 +2758,30 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1099463976312027207, guid: 2ae5cb659c42ac5e3951acff6ae22d65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ae5cb659c42ac5e3951acff6ae22d65, type: 3}
+--- !u!114 &1280897315 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3721754511352499134, guid: f8d8c2654628b844fbe412509f55529b,
+    type: 3}
+  m_PrefabInstance: {fileID: 192785518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1323020419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3721754511352499134, guid: f8d8c2654628b844fbe412509f55529b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2040905735}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1330022593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2865,7 +2901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerScore: {fileID: 329308738}
-  PopUpText: {fileID: 0}
+  PopUpText: {fileID: 1867947363}
 --- !u!60 &1354961012
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3403,6 +3439,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1867947363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3721754511352499134, guid: f8d8c2654628b844fbe412509f55529b,
+    type: 3}
+  m_PrefabInstance: {fileID: 296445416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1872726680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3963,6 +4011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Directional Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721480847206817894, guid: a1ddce4159f198740b22f72f38d1f8ac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5721480847206817895, guid: a1ddce4159f198740b22f72f38d1f8ac,
         type: 3}
