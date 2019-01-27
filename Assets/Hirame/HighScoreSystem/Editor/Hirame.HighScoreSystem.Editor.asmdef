@@ -1,8 +1,7 @@
 {
     "name": "Hirame.HighScoreSystem.Editor",
     "references": [
-        "Hirame.HighScoreSystem",
-        "TwistedArk.AlchemyEngine.Singletons"
+        "Hirame.HighScoreSystem"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [
