@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ikiem\.Rider2018.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\ikiem\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ikiem\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Home-ForTuna.-1159726751.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ikiem\Documents\GitHub\Home-ForTuna" t="IncludeRecursive">
+    <e p="C:\Users\jeree\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\jeree\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jeree\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_Home-ForTuna.68659545.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jeree\Documents\GitHub\Home-ForTuna" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -12,6 +12,49 @@
           <e p="Skybox Cubemap Extended" t="Include">
             <e p="Shaders" t="Include">
               <e p="Skybox Cubemap Extended.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Hirame" t="Include">
+          <e p="HighScoreSystem" t="Include">
+            <e p="Editor" t="Include">
+              <e p="HighScoreEditor.cs" t="Include" />
+              <e p="Hirame.HighScoreSystem.Editor.asmdef" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="HighScoreDisplay.cs" t="Include" />
+              <e p="HighScoreEntry.cs" t="Include" />
+              <e p="HighScoreManager.cs" t="Include" />
+              <e p="HighScoresUtility.cs" t="Include" />
+              <e p="Hirame.HighScoreSystem.asmdef" t="Include" />
+            </e>
+          </e>
+          <e p="Minerva" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GameEvents" t="Include">
+                <e p="GameEventEditor.cs" t="Include" />
+                <e p="GameEventListenerEditor.cs" t="Include" />
+              </e>
+              <e p="Globals" t="Include">
+                <e p="GlobalValueEditor.cs" t="Include" />
+              </e>
+              <e p="GlobalsEditorUtility.cs" t="Include" />
+              <e p="Hirame.Minerva.Editor.asmdef" t="Include" />
+              <e p="MinervaEditorBase.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="GameEvents" t="Include">
+                <e p="GameEvent.cs" t="Include" />
+                <e p="GameEventListener.cs" t="Include" />
+                <e p="GameEventRegistry.cs" t="Include" />
+              </e>
+              <e p="Globals" t="Include">
+                <e p="GlobalColor.cs" t="Include" />
+                <e p="GlobalFloat.cs" t="Include" />
+                <e p="GlobalInt.cs" t="Include" />
+                <e p="GlobalValue.cs" t="Include" />
+              </e>
+              <e p="Hirame.Minerva.asmdef" t="Include" />
             </e>
           </e>
         </e>
@@ -78,6 +121,10 @@
           <e p="aaasddee.cs" t="Include" />
         </e>
       </e>
+      <e p="Hirame.HighScoreSystem.csproj" t="IncludeRecursive" />
+      <e p="Hirame.HighScoreSystem.Editor.csproj" t="IncludeRecursive" />
+      <e p="Hirame.Minerva.csproj" t="IncludeRecursive" />
+      <e p="Hirame.Minerva.Editor.csproj" t="IncludeRecursive" />
       <e p="Home-ForTuna.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
