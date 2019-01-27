@@ -7,7 +7,7 @@ using TMPro;
 
 public class UpdateScores : MonoBehaviour
 {
-    public SimpleCollector Collector;
+    public Score PlayerScore;
     public List<HighScoreEntry> ScoreEntries;
     public int LastPlayerFontSize = (int) (46 * 1.618f);
     public int DefaultFontSize = 46;
@@ -18,16 +18,11 @@ public class UpdateScores : MonoBehaviour
 
     private Color defaultColor;
 
-    private void Awake()
-    {
-        defaultColor = ScoreEntries[0].PlayerName.TextField.color;
-    }
-
     private void OnEnable()
     {
-        HighScoreManager.UploadScore(
-            HighScoreManager.GetLastPlayerName (), Collector.Score, OnScoreUploaded);
-        HighScoreManager.HighScoresUpdated += OnHighScoresUpdated;
+        HighScore.UploadScore(
+            HighScore.GetLastPlayerName (), PlayerScore.CurrentScore, OnScoreUploaded);
+        HighScore.HighScoresUpdated += OnHighScoresUpdated;
 
         foreach (var entry in ScoreEntries)
             entry.gameObject.SetActive(false);
@@ -35,27 +30,15 @@ public class UpdateScores : MonoBehaviour
 
     private void OnDisable ()
     {
-        HighScoreManager.HighScoresUpdated -= OnHighScoresUpdated;
+        HighScore.HighScoresUpdated -= OnHighScoresUpdated;
     }
-
-    // 4: asd
-    // 5: ko
-    // 6: fs 
-    // 7: GUY (Us)
-    // 8: noinaoi
-
-        // 1: asd
-        // 2: GUY (US
-        // 3: fs
-        // 4:
-        // 5:
 
     void OnHighScoresUpdated (int from, int count)
     {
-        var ownIndex = HighScoreManager.FindPlacementInLocalData(
-            HighScoreManager.GetLastPlayerName ());
+        var ownIndex = HighScore.FindPlacementInLocalData(
+            HighScore.GetLastPlayerName ());
 
-        var scoresCount = HighScoreManager.ScoresCount;
+        var scoresCount = HighScore.ScoresCount;
 
 
         var startIndex = Mathf.Max(0, ownIndex - ScoreEntries.Count + 2);
@@ -68,7 +51,7 @@ public class UpdateScores : MonoBehaviour
         var ind = 0;
         for (ind = 0; ind < itemsToDisplay; ind++)
         {
-            var data = HighScoreManager.GetPlayerData(startIndex++);
+            var data = HighScore.GetPlayerData(startIndex++);
 
             ScoreEntries[ind].gameObject.SetActive(true);
             ScoreEntries[ind].SetValues(data.Ranking, data.Username, data.Score);
@@ -104,11 +87,11 @@ public class UpdateScores : MonoBehaviour
     void OnScoreUploaded(bool succes)
     {
         //HighScoreManager.UpdateHighScoresFromServer(Scoreboard.Entries.Count);
-        HighScoreManager.UpdateHighScoresFromServer();
+        HighScore.UpdateHighScoresFromServer();
     }
 
     public void UpdatePlayerName(string name)
     {
-        HighScoreManager.SetPlayerName(MenuEventMessager.PlayerName);
+        HighScore.SetPlayerName(name);
     }
 }
