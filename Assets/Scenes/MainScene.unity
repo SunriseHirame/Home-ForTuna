@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.3176695, g: 0.67820394, b: 1.063151, a: 1}
+  m_IndirectSpecularColor: {r: 0.31800514, g: 0.678319, b: 1.063141, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5116,7 +5116,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 3.14
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -13851,6 +13851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721480847206817894, guid: a1ddce4159f198740b22f72f38d1f8ac,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 5721480847206817895, guid: a1ddce4159f198740b22f72f38d1f8ac,
         type: 3}
