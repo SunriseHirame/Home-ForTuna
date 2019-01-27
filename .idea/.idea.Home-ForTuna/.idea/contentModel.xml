@@ -41,8 +41,13 @@
           <e p="FishSpawner.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="RandomScale.cs" t="Include" />
+          <e p="ROllingPropellers.cs" t="Include" />
           <e p="Score.cs" t="Include" />
+          <e p="sinewave.cs" t="Include" />
           <e p="Splasher.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Water.shader" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
