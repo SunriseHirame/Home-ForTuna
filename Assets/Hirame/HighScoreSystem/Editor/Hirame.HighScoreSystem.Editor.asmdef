@@ -1,0 +1,17 @@
+{
+    "name": "Hirame.HighScoreSystem.Editor",
+    "references": [
+        "Hirame.HighScoreSystem",
+        "TwistedArk.AlchemyEngine.Singletons"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
