@@ -19,7 +19,7 @@ namespace Hirame.HighScore
         {
             if (GUILayout.Button ("Open web view"))
             {
-                Application.OpenURL (HighScoreManager.HighScoreUrl);
+                Application.OpenURL (HighScore.HighScoreUrl);
             }
 
             EditorGUILayout.Space ();
@@ -28,7 +28,7 @@ namespace Hirame.HighScore
             highScoreDisplay.Score = EditorGUILayout.TextField ("Score", highScoreDisplay.Score);
             
             if (GUILayout.Button ("Add Score"))
-                HighScoreManager.UploadScore (highScoreDisplay.Username, highScoreDisplay.Score, null);
+                HighScore.UploadScore (highScoreDisplay.Username, highScoreDisplay.Score, null);
             
             DrawPropertiesExcluding (serializedObject, "Username", "Score");
         }

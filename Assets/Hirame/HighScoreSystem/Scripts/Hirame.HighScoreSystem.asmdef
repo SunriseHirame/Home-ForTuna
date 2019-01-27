@@ -1,7 +1,6 @@
 {
     "name": "Hirame.HighScoreSystem",
     "references": [
-        "TwistedArk.AlchemyEngine.Singletons",
         "Unity.TextMeshPro"
     ],
     "optionalUnityReferences": [],

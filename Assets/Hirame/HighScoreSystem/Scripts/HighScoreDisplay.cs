@@ -32,7 +32,7 @@ namespace Hirame.HighScore
 
         public void NextPage ()
         {
-            StartFrom = Mathf.Min(HighScoreManager.ScoresCount - Entries.Count, StartFrom + Entries.Count);
+            StartFrom = Mathf.Min(HighScore.ScoresCount - Entries.Count, StartFrom + Entries.Count);
             UpdateScoreDisplay();
         }
 
@@ -44,12 +44,12 @@ namespace Hirame.HighScore
 
         public void SendScore ()
         {
-            HighScoreManager.UploadScore (Username, Score, OnScoreUploaded);
+            HighScore.UploadScore (Username, Score, OnScoreUploaded);
         }
 
         public void RefreshScores ()
         {
-            HighScoreManager.UpdateHighScoresFromServer ();
+            HighScore.UpdateHighScoresFromServer ();
         }
         
         private void OnScoreUploaded (bool succeeded)
@@ -68,13 +68,13 @@ namespace Hirame.HighScore
 
         private void UpdateScoreDisplay ()
         {
-            var scores = HighScoreManager.ScoresCount;
+            var scores = HighScore.ScoresCount;
 
             for (var i = 0; i < Entries.Count; i++)
             {
                 if (StartFrom + i < scores)
                 {
-                    var score = HighScoreManager.GetPlayerData(StartFrom + i);
+                    var score = HighScore.GetPlayerData(StartFrom + i);
                     Entries[i].SetValues(score.Ranking, score.Username, score.Score);
                     Entries[i].gameObject.SetActive(true);
                 }
@@ -86,10 +86,10 @@ namespace Hirame.HighScore
 
         private void OnEnable ()
         {
-            HighScoreManager.HighScoresUpdated += OnHighScoresUpdated;
+            HighScore.HighScoresUpdated += OnHighScoresUpdated;
 
             if (FetchLastPlayerName)
-                Username = HighScoreManager.GetLastPlayerName ();
+                Username = HighScore.GetLastPlayerName ();
 
             if (RefreshOnEnable)
                 RefreshScores ();
@@ -97,7 +97,7 @@ namespace Hirame.HighScore
 
         private void OnDisable ()
         {
-            HighScoreManager.HighScoresUpdated -= OnHighScoresUpdated;
+            HighScore.HighScoresUpdated -= OnHighScoresUpdated;
         }
 
 #if UNITY_EDITOR
