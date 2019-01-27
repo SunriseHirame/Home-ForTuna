@@ -6,6 +6,7 @@ using TMPro;
 
 public class Score : MonoBehaviour {
     public int CurrentScore = 0;
+    public int TunaCollected;
     public TMP_Text TextObject;
 
     private void Update() {
