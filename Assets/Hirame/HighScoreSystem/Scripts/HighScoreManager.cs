@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
-using AlchemyEngine;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -33,6 +28,13 @@ namespace Hirame.HighScore
         private static void Initialize ()
         {
             Instance = new GameObject ("HighScore").AddComponent<HighScore> ();
+            
+            var lastUser = PlayerPrefs.GetString ("LastUserName", string.Empty);
+
+            if (string.IsNullOrEmpty (lastUser))
+                return;
+            
+            CurrentPlayerLastData.Username = lastUser;
         }
 
         public static PlayerHighScoreData GetPlayerData (int index)
@@ -97,7 +99,7 @@ namespace Hirame.HighScore
                 || !HighScoresUtility.ValidateUserDataString (score))
             {
                 Debug.LogError (
-                    $"[{nameof (HighScoreManager)}]: Provided 'username' or 'score' was null of empty, or it contained invalid characters!");
+                    $"[{nameof (HighScore)}]: Provided 'username' or 'score' was null of empty, or it contained invalid characters!");
                 callback.Invoke (false);
                 return false;
             }
@@ -142,16 +144,6 @@ namespace Hirame.HighScore
             Instance.StartCoroutine (Instance.Internal_UpdateHighScores (start, count));
         }
 
-        public override void OnSingletonCreated ()
-        {
-            var lastUser = PlayerPrefs.GetString ("LastUserName", string.Empty);
-
-            if (string.IsNullOrEmpty (lastUser))
-                return;
-            
-            CurrentPlayerLastData.Username = lastUser;
-        }
-
         private void OnDisable ()
         {
             Debug.Log(CurrentPlayerLastData.Username);
@@ -173,7 +165,7 @@ namespace Hirame.HighScore
 
                 if (webRequest.isNetworkError)
                 {
-                    Debug.LogError ($"[{nameof (HighScoreManager)}]: Failed to fetch user's score! {webRequest.error}");
+                    Debug.LogError ($"[{nameof (HighScore)}]: Failed to fetch user's score! {webRequest.error}");
                     callback?.Invoke (new PlayerHighScoreData ());
                     yield break;
                 }
@@ -198,7 +190,7 @@ namespace Hirame.HighScore
                 if (webRequest.isNetworkError)
                 {
                     Debug.LogError (
-                        $"[{nameof (HighScoreManager)}]: Failed to upload user's score! {webRequest.error}");
+                        $"[{nameof (HighScore)}]: Failed to upload user's score! {webRequest.error}");
                     callback?.Invoke (false);
                     yield break;
                 }
@@ -222,7 +214,7 @@ namespace Hirame.HighScore
                 if (webRequest.isNetworkError)
                 {
                     Debug.LogError (
-                        $"[{nameof (HighScoreManager)}]: Failed to upload user's score! {webRequest.error}");
+                        $"[{nameof (HighScore)}]: Failed to upload user's score! {webRequest.error}");
                     yield break;
                 }
 
@@ -249,7 +241,7 @@ namespace Hirame.HighScore
                 if (webRequest.isNetworkError)
                 {
                     Debug.LogError (
-                        $"[{nameof (HighScoreManager)}]: Failed to upload user's score! {webRequest.error}");
+                        $"[{nameof (HighScore)}]: Failed to upload user's score! {webRequest.error}");
                     yield break;
                 }
 
@@ -276,7 +268,7 @@ namespace Hirame.HighScore
                 if (webRequest.isNetworkError)
                 {
                     Debug.LogError (
-                        $"[{nameof (HighScoreManager)}]: Failed to upload user's score! {webRequest.error}");
+                        $"[{nameof (HighScore)}]: Failed to upload user's score! {webRequest.error}");
                     yield break;
                 }
 
@@ -309,11 +301,11 @@ namespace Hirame.HighScore
                 if (webRequest.isNetworkError)
                 {
                     Debug.LogError (
-                        $"[{nameof (HighScoreManager)}]: Failed to upload user's score! {webRequest.error}");
+                        $"[{nameof (HighScore)}]: Failed to upload user's score! {webRequest.error}");
                     yield break;
                 }
 
-                Debug.Log ($"[{nameof (HighScoreManager)}]: Scores Cleared.");
+                Debug.Log ($"[{nameof (HighScore)}]: Scores Cleared.");
 
                 for (var i = 0; i < HighScores.Length; i++)
                 {
